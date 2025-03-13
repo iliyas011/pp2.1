@@ -49,22 +49,20 @@ while running:
     sc.fill(WHITE)
     sc.blit(bg, rect)
 
-    # Получение текущего времени
     time = datetime.now().time()
 
-    # Секундная стрелка (вращение на -6 градусов за каждую секунду)
+ 
     sang = -(time.second * 6)
     rotated_second = pygame.transform.rotate(second, sang)
     sec_rect = rotated_second.get_rect(center=rect.center)
     sc.blit(rotated_second, sec_rect.topleft)
 
-    # Минутная стрелка (вращение на -6 градусов за каждую минуту)
+
     mang = -(time.minute * 6)
     rotated_minute = pygame.transform.rotate(minute, mang)
     min_rect = rotated_minute.get_rect(center=rect.center)
     sc.blit(rotated_minute, min_rect.topleft)
 
-    # Обновление экрана
     pygame.display.flip()
     clock.tick(FPS)
 
