@@ -64,7 +64,7 @@ def update_label():
     song_label.config(text=f"🎵 Now Playing: {playlist[current_track]}" if playing else "⏸ Paused")
 
 root = tk.Tk()
-root.title("🎧 Музыкальный Плеер")
+root.title("Музыкальный Плеер")
 root.geometry("400x300")
 root.resizable(False, False)
 
@@ -101,7 +101,7 @@ def on_press(key):
         pass
 
 
-print("🎧 Управление плеером:")
+print(" Управление плеером:")
 print("[Space] - Play/Pause | [S] - Stop | [→] - Next | [←] - Previous")
 
 with keyboard.Listener(on_press=on_press) as listener:
