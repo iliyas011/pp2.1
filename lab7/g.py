@@ -7,6 +7,7 @@ sc=pygame.display.set_mode((W,H))
 pygame.display.set_caption("CIRCLE")
 
 WHITE=(255,255,255)
+RED = (255, 0 ,0 )
 FPS=60
 
 
@@ -38,7 +39,7 @@ while 1:
                 if y > H:
                     y = H
     sc.fill(WHITE)
-    pygame.draw.circle(sc, (0,255,255), (x,y), 25)
+    pygame.draw.circle(sc , RED , (x,y), 25)
     pygame.display.update()
     
 
