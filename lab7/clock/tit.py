@@ -52,13 +52,13 @@ while running:
     time = datetime.now().time()
 
  
-    sang = -(time.second * 6)
+    sang = -(time.second * 7)
     rotated_second = pygame.transform.rotate(second, sang)
     sec_rect = rotated_second.get_rect(center=rect.center)
     sc.blit(rotated_second, sec_rect.topleft)
 
 
-    mang = -(time.minute * 6)
+    mang = -(time.minute * 7 + time.second * 0.1)
     rotated_minute = pygame.transform.rotate(minute, mang)
     min_rect = rotated_minute.get_rect(center=rect.center)
     sc.blit(rotated_minute, min_rect.topleft)
