@@ -61,7 +61,7 @@ def toggle_play():
 
 
 def update_label():
-    song_label.config(text=f"🎵 Now Playing: {playlist[current_track]}" if playing else "⏸ Paused")
+    song_label.config(text=f" Now Playing: {playlist[current_track]}" if playing else "⏸ Paused")
 
 root = tk.Tk()
 root.title("Музыкальный Плеер")
@@ -69,7 +69,7 @@ root.geometry("400x300")
 root.resizable(False, False)
 
 
-song_label = tk.Label(root, text="🎵 Now Playing: ", font=("Arial", 12))
+song_label = tk.Label(root, text=" Now Playing: ", font=("Arial", 12))
 song_label.pack(pady=10)
 
 btn_play = tk.Button(root, text="▶ Play/Pause", command=toggle_play, width=15, height=2)
