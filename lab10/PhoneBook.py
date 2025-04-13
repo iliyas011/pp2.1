@@ -68,7 +68,7 @@ while True:
             cur.execute("INSERT INTO PhoneBook VALUES (%s,%s,%s)", row)
             conn.commit()
 
-# UPDATING DATA---------
+
 while True:
     print("Type 'update' to update some data or 'stop' to break")
     mode = input()
@@ -84,7 +84,7 @@ while True:
     newvalue = input()
     update(idtochange, mode, newvalue)
 
-# DELETING DATA-----------
+
 while True:
     print("want to delete some data? yes/no")
     mode = input()
